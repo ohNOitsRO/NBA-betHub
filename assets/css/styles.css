@@ -4,7 +4,7 @@
 }
   
 body {
-    font-family: 'Lora', serif;
+    font-family: 'Comfortaa', cursive;
     background-image: url(../images/hardwood.jpg);
     background-size: auto;
     min-height: 100vh;
@@ -14,7 +14,7 @@ body {
   justify-content: center;
   display: flex;
   font-size: 50px;
-  color: aliceblue;
+  color: rgb(255, 255, 255);
 }
   
 .header {
@@ -28,6 +28,11 @@ body {
   display: flex;
   border-radius: 15px;
   border-style: none;
+}
+
+h1 {
+  line-height: 30px;
+  margin-top: 0px;
 }
   
 .card {
@@ -104,7 +109,7 @@ nav {
 
 #live-scores {
   font-size: 18px;
-  color: aliceblue;
+  color: rgb(255, 255, 255);
 }
 
 .column:hover{
@@ -115,22 +120,6 @@ nav {
   content: none;
   display: table;
   clear: both;
-}
-
-.footer {
-  padding: 10px;
-  text-align: top;
-  width: 90%;
-  display: flex;
-  justify-content: center;
-  align-items: top;
-  height: 200px;
-  border-radius: 30px;
-  margin-left: 50px;
-  font-size: 30px;
-  cursor: pointer;
-  background-color: #f96d00;
-  color: white;
 }
 
 /* Media Queries */

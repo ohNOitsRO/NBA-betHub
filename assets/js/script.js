@@ -3,7 +3,7 @@ var dateDisplay = dayjs().format('MM/DD/YYYY');
 var liveScores = document.querySelector("#live-scores");
 var todayDate = document.querySelector("#current-date");
 
-// todayDate.textContent = dateDisplay;
+todayDate.textContent = dateDisplay;
 
 // Get All NBA Basketball games data
 function getGames(){
