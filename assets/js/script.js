@@ -58,10 +58,10 @@ function getGifApi(){
     })
 
     .then(data => {
-            var gif = document.querySelector(".gif-container");
+            var gif = document.querySelector("#gif-container");
             gif.src = data.data[Math.floor(Math.random() * 25)].images.original.url;
             
-        $(".btn").click(function(event){
+        $(".material-icons").click(function(event){
             event.preventDefault();
             getGames();
             gif.src = data.data[Math.floor(Math.random() * 25)].images.original.url;
