@@ -1,0 +1,141 @@
+/* Helper Classes */
+* {
+    box-sizing: border-box;
+}
+  
+body {
+    font-family: 'Lora', serif;
+    background-image: url(../images/hardwood.jpg);
+    background-size: auto;
+    min-height: 100vh;
+}
+
+.display-3 {
+  justify-content: center;
+  display: flex;
+  font-size: 50px;
+  color: aliceblue;
+}
+  
+.header {
+  background-color: darkgray;
+  padding: 20px;
+  text-align: center;
+  font-size: 35px;
+  height: 400px;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  border-radius: 15px;
+  border-style: none;
+}
+  
+.card {
+    background-color: rgb(57, 62, 70, 0.7);
+}
+
+.card.small .card-image {
+    max-height: 100%; 
+}
+
+.card-content {
+  text-align: center;
+}
+
+#card-container {
+  height: auto;
+}
+
+#gif-btn {
+  padding: 0px;
+}
+
+.waves-effect {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  background-color: #f96d00;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-bottom: 260px;
+}
+
+.row .col.s12 {
+  margin-left: 0px;
+}
+
+.row .col.m7 {
+  margin-left: 0px;
+}
+
+li {
+  list-style-type: none;
+}
+
+nav {
+  background:rgba(255, 255, 255, 0);
+}
+
+.nav-wrapper{
+  justify-content: space-evenly;
+}
+
+.column {
+  float: left;
+  width: 30%;
+  padding: 10px;
+  height: 500px;
+  border-radius: 15px;
+  justify-content: space-evenly;
+  font-size: 35px;
+  margin: 17px;
+  flex: content;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5 ease-in;
+  color: white;
+}
+
+#live-scores {
+  font-size: 18px;
+  color: aliceblue;
+}
+
+.column:hover{
+  background: blue;
+}
+
+.row:after {
+  content: none;
+  display: table;
+  clear: both;
+}
+
+.footer {
+  padding: 10px;
+  text-align: top;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  height: 200px;
+  border-radius: 30px;
+  margin-left: 50px;
+  font-size: 30px;
+  cursor: pointer;
+  background-color: #f96d00;
+  color: white;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
