@@ -1,5 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
+:root {
+  --white: #fff;
+  --text: #333;
+  --textinverted: #eee;
+  --bkg: #eee;
+  --bkgwhite: #fff;
+  --bkggrey: #ccc;
+  --bkgdark: #333;
+  --bkgovertime: #900;
+  --yellow: #FCF506;
+  --red: #fc0303;
+  --linee: #999;
+  }
+  
+
 /* Helper Classes */
 * {
     box-sizing: border-box;
@@ -14,6 +29,7 @@ body {
 
 section {
   display: flex;
+  justify-content: center;
 
 }
 
@@ -182,10 +198,12 @@ On the left you can read every single element with his class */
 
 .containerbasket .containerbasket {box-sizing: border-box; border: solid 1vw #666;}
 
+.containerbasket .boxbonuson {color: var(--textinverted);background: var(--bkgovertime);}
+.containerbasket .secondliners {font-size: .7em;background: var(--bkg);color: #000;font-weight: bold;border-top: solid 1px #ccc;border-right: solid 1px #ddd;}
 
 /* this change labels of Fouls and Timeouts */
-.containerbasket .boxfouls:before {content:"Fouls:"; font-size: .5em;}
-.containerbasket .boxtimeouts:before {content:"Timeout:"; font-size: .5em;}
+.containerbasket .boxfouls:before {content:"Fouls: "; font-size: .5em;}
+.containerbasket .boxtimeouts:before {content:"Timeouts: "; font-size: .5em;}
 .containerbasket .boxbonus {display: flex; justify-content: center; align-items: center; font-size:.4em;}
 
 .containerbasket .boxhometeam, .containerbasket .boxawayteam {position: relative; justify-content: flex-end; padding: 0 2vw;}
@@ -202,3 +220,44 @@ On the left you can read every single element with his class */
 .containerbasket .boxawayteam {background:linear-gradient(72deg, rgba(0,0,0,1) 0%, rgba(222,123,123,1) 39%, rgba(227,166,166,1) 41%, rgba(255,0,0,1) 100%);;}
 .containerbasket .boxawayteam:before {content:""; position:absolute; top:0; left:0; width:50%; height:100%; background:url(https://www.nba.com/raptors/sites/raptors/files/raps-1718-mainlogo.png) no-repeat center; background-size:70%;}
 .containerbasket .boxawaypoints {background:#ff0000;}
+
+  
+
+  strong, em {
+    font-weight: normal; 
+    font-style: normal;
+  }
+  
+  
+  .box {
+    text-align: center;
+  
+  }
+
+  .boxhomepoints, .boxawaypoints, .space {
+    font-weight: bold;
+  }
+
+  .boxmoment span {
+    white-space: nowrap;
+  }
+
+  .space{
+    text-align: center;
+  }
+  
+  .boxhometeam, .boxawayteam {
+    background: var(--bkg);
+  }
+
+  .boxtimer, .boxmoment {
+    color: var(--textinverted);
+  }
+
+  .boxhomepoints, .boxawaypoints, .space {
+    background: #ccc;
+  }
+
+  .boxtimer {background: var(--bkgdark);}
+  .boxmoment {background: var(--bkgdark);}
+  .boxovertimeon {background: var(--bkgovertime);}
