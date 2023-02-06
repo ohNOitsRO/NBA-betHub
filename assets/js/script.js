@@ -1,7 +1,9 @@
-var currentDate = dayjs().format('YYYY-MM-DD');
-var dateDisplay = dayjs().format('MM/DD/YYYY');
-var liveScores = document.querySelector("#live-scores");
-var todayDate = document.querySelector("#current-date");
+let currentDate = dayjs().format('YYYY-MM-DD');
+let dateDisplay = dayjs().format('MM/DD/YYYY');
+let todayDate = document.querySelector("#current-date");
+let homeTeam = document.querySelector("#team_1");
+let awayTeam = document.querySelector("#team_2");
+let mainBox = document.querySelector("#main-text");
 
 todayDate.textContent = dateDisplay;
 
@@ -22,20 +24,14 @@ function getGames(){
     })
 
     .then (function(data) {
+
         for (i=0; i < data.response.length - 1; i++){
-            var p = document.createElement("p");
-            var line = document.createElement("li");
+            
+            let zeroScore = null;
+            zeroScore = zeroScore === null ? 0 : val;
 
-            p.setAttribute("id", "teamnames"+i);
-            liveScores.appendChild(p);
-            var teamNames = document.querySelector("#teamnames"+i)
-
-            line.setAttribute("id", "game"+i);
-            liveScores.appendChild(line);
-            var gameScores = document.querySelector("#game"+i);
-
-            teamNames.textContent = data.response[i].teams.home.name + "   VS.   " + data.response[i].teams.away.name;
-            gameScores.textContent = data.response[i].status.long + "  -  " + data.response[i].scores.away.total + " - " + data.response[i].scores.home.total;
+            homeTeam.textContent = data.response[i].teams.home.name;
+            awayTeam.textContent = data.response[i].teams.away.name;
 
         }
 
@@ -76,5 +72,27 @@ function getGifApi(){
     });
 
 }
+
+
+$("#standings").click(function(event){
+    event.preventDefault();
+
+    mainBox.style.display = "flex";
+    mainBox.innerHTML = "";
+    mainBox.textContent = "COMING SOON!"
+    
+
+});
+
+$("#odds").click(function(event){
+    event.preventDefault();
+    
+    mainBox.style.display = "flex";
+    mainBox.innerHTML = "";
+    mainBox.textContent = "COMING SOON!"
+    
+
+});
+
 
 getGifApi();

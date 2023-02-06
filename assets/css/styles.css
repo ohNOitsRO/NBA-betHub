@@ -83,6 +83,33 @@ h1 {
   padding: 0px;
 }
 
+.boxtimer {
+  background-color: #546e7a !important;
+
+}
+
+.boxmoment {
+  background-color: #546e7a !important;
+
+}
+
+.bgcolor {
+  background-color: rgb(57, 62, 70, 0.7);
+
+}
+
+.tabs .tab a {
+  color: rgb(255 165 0);
+  transition: color .28s ease, background-color .28s ease
+
+}
+
+.tabs .tab a:hover, .tabs .tab a.active {
+  color: rgb(255 165 0);
+  background-color: transparent;
+
+}
+
 .waves-effect {
   display: flex;
   justify-content: center;
@@ -135,11 +162,6 @@ nav {
   color: white;
 }
 
-#live-scores {
-  font-size: 18px;
-  color: rgb(255, 255, 255);
-}
-
 .column:hover{
   background: blue;
 }
@@ -148,6 +170,11 @@ nav {
   content: none;
   display: table;
   clear: both;
+}
+
+#standings, #odds {
+  text-align: center;
+
 }
 
 /* Media Queries */
