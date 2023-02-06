@@ -33,7 +33,7 @@ section {
 
 }
 
-.display-3 {
+.display {
   justify-content: center;
   display: flex;
   font-size: 50px;
@@ -100,7 +100,6 @@ h1 {
 
 .tabs .tab a {
   color: rgb(255 165 0);
-  transition: color .28s ease, background-color .28s ease
 
 }
 

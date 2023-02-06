@@ -3,6 +3,8 @@ let dateDisplay = dayjs().format('MM/DD/YYYY');
 let todayDate = document.querySelector("#current-date");
 let homeTeam = document.querySelector("#team_1");
 let awayTeam = document.querySelector("#team_2");
+let homeScore = document.querySelector("#points_1");
+let awayScore = document.querySelector("#points_2");
 let mainBox = document.querySelector("#main-text");
 
 todayDate.textContent = dateDisplay;
@@ -24,14 +26,14 @@ function getGames(){
     })
 
     .then (function(data) {
+        console.log(data);
 
         for (i=0; i < data.response.length - 1; i++){
-            
-            let zeroScore = null;
-            zeroScore = zeroScore === null ? 0 : val;
 
             homeTeam.textContent = data.response[i].teams.home.name;
             awayTeam.textContent = data.response[i].teams.away.name;
+            homeScore.textContent = data.response[i].scores.home.total;
+            awayScore.textcontent = data.response[i].scores.away.total;
 
         }
 
