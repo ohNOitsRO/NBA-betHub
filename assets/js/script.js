@@ -32,6 +32,12 @@ function getGames(){
 
             homeTeam.textContent = data.response[i].teams.home.name;
             awayTeam.textContent = data.response[i].teams.away.name;
+
+            if (data.response[i].scores.home.total && data.response[i].scores.away.total === null){
+                homeScore.textContent = "0";
+                awayScore.textContent = "0";
+            }
+
             homeScore.textContent = data.response[i].scores.home.total;
             awayScore.textcontent = data.response[i].scores.away.total;
 
