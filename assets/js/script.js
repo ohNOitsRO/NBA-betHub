@@ -6,6 +6,7 @@ let awayTeam = document.querySelector("#team_2");
 let homeScore = document.querySelector("#points_1");
 let awayScore = document.querySelector("#points_2");
 let mainBox = document.querySelector("#main-text");
+let gameScore = document.querySelector('#')
 
 todayDate.textContent = dateDisplay;
 
@@ -28,15 +29,15 @@ function getGames(){
     .then (function(data) {
         console.log(data);
 
-        for (i=0; i < data.response.length - 1; i++){
+        // for (i=0; i < data.response.length - 1; i++){
 
-            homeTeam.textContent = data.response[i].teams.home.name;
-            awayTeam.textContent = data.response[i].teams.away.name;
+            homeTeam.textContent = data.response[2].teams.home.name;
+            awayTeam.textContent = data.response[2].teams.away.name;
 
-            homeScore.textContent = data.response[i].scores.home.total +0;
-            awayScore.textContent = data.response[i].scores.away.total +0;
+            homeScore.textContent = data.response[2].scores.home.total +0;
+            awayScore.textContent = data.response[2].scores.away.total +0;
                
-        }
+        // }
 
     })
 
