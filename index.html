@@ -14,41 +14,68 @@
 </head>
 
 <body>
-  <h1 class="display-3">
-    <!-- NBA betHub -->
-    <p><span class="display-3">NBA betHub</span><br>
-    <span class="display-3" style="font-size: 30px;" id="current-date"></span></p>
+  <h1 class="display">
+    <p><span class="display">NBA betHub</span><br>
+    <span class="display" style="font-size: 30px;" id="current-date"></span></p>
   </h1>
 
 <main>
+
+
+
+<div class="row">
+    
+  <div class="container">
+    <div class="col s9 m9 l9">
+      <div class="card bgcolor">
+
+        <div class="card-content white-text">
+          <span class="card-title"></span>
+          <p></p>
+            <section id="boxes">
+            <div class="container-grid containerbasket" id="main-text">
+              <div class="box boxtimer" id="timer">10:00</div>
+              <div class="box boxhometeam" id="team_1">IND</div>
+              <div class="box boxhomepoints" id="points_1"></div>
+              <div class="space">-</div>
+              <div class="box boxawaypoints" id="points_2"></div>
+              <div class="box boxawayteam" id="team_2">TOR</div>
+              <div class="box boxmoment boxovertimeoff" id="ovt"><span><em id="overtime">Q</em><strong id="moment">1</strong></span></div>
+            </div>
+
+            </section>
+          <p><strong id="live-games" style="font-size: 26px;"><u>Live Games</u></strong></p>
+        </div>
+
+        <div class="card-tabs">
+          <ul class="tabs tabs-fixed-width">
+            <li class="tab"><a class="active" href="#standings" id="standings">Standings</a></li>
+            <li class="tab"><a class="active" href="#live-scores" id="live-scores">Live Scores</a></li>
+            <li class="tab"><a class="active" href="#odds" id="odds">Odds</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
     
 
-    <div class="row">
-
-      <div class="col s12 m7">
-        <div class="card small" id="card-container">
-          <div class="card-image"></div>
-            <div class="card-content">
-              <p class="card-title" id="live-scores"><u>Live Scores</u></p>
-              
-            </div>
+    <div class="col s3 m3 l3">
+      <div class="card">
+        <div class="card-image">
+          <img id="gif-container" src="">
+          <span class="card-title"></span>
+          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">+</i></a>
+        </div>
+        <div class="card-content white-text">
+          <p>Need help deciding who to place a bet on? Click above for some inspiration!</p>
         </div>
       </div>
-      
-      <div class="col s12 m7">
-        <div class="card small">
-          <div class="card-image">
-            <img class="gif-container" src="">
-            <span class="card-title"></span>
-          </div>
-          <div class="card-content" id="gif-btn">
-            <p></p>
-          </div>
-          <a class="waves-effect waves-light btn">Random NBA Gif</a>
-        </div>
-      </div>
-      
     </div>
+
+  </div>
+</div>
+
+
 </main>
                
       

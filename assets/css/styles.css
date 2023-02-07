@@ -1,4 +1,23 @@
-/* Helper Classes */
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* Materialize CSS Root Colors */
+:root {
+  --white: #fff;
+  --text: #333;
+  --textinverted: #eee;
+  --bkg: #eee;
+  --bkgwhite: #fff;
+  --bkggrey: #ccc;
+  --bkgdark: #333;
+  --bkgovertime: #900;
+  --yellow: #FCF506;
+  --red: #fc0303;
+  --linee: #999;
+  }
+  
+
+/* Helper Classes Styling Different Elements*/
 * {
     box-sizing: border-box;
 }
@@ -10,7 +29,12 @@ body {
     min-height: 100vh;
 }
 
-.display-3 {
+section {
+  display: flex;
+  justify-content: center;
+}
+
+.display {
   justify-content: center;
   display: flex;
   font-size: 50px;
@@ -47,12 +71,37 @@ h1 {
   text-align: center;
 }
 
+.container-grid {
+  display: grid;
+}
+
 #card-container {
   height: auto;
 }
 
 #gif-btn {
   padding: 0px;
+}
+
+.boxtimer {
+  background-color: #546e7a !important;
+}
+
+.boxmoment {
+  background-color: #546e7a !important;
+}
+
+.bgcolor {
+  background-color: rgb(57, 62, 70, 0.7);
+}
+
+.tabs .tab a {
+  color: rgb(255 165 0);
+}
+
+.tabs .tab a:hover, .tabs .tab a.active {
+  color: rgb(255 165 0);
+  background-color: transparent;
 }
 
 .waves-effect {
@@ -107,11 +156,6 @@ nav {
   color: white;
 }
 
-#live-scores {
-  font-size: 18px;
-  color: rgb(255, 255, 255);
-}
-
 .column:hover{
   background: blue;
 }
@@ -122,9 +166,243 @@ nav {
   clear: both;
 }
 
+#standings, #odds {
+  text-align: center;
+}
+
+strong, em {
+  font-weight: normal; 
+  font-style: normal;
+}
+
+.box {
+  text-align: center;
+}
+
+.boxhomepoints, .boxawaypoints, .space {
+  font-weight: bold;
+}
+
+.boxmoment span {
+  white-space: nowrap;
+}
+
+.space {
+  text-align: center;
+}
+
+.boxhometeam, .boxawayteam {
+  background: var(--bkg);
+}
+
+.boxtimer, .boxmoment {
+  color: var(--textinverted);
+}
+
+.boxhomepoints, .boxawaypoints, .space {
+  background: #ccc;
+}
+
+.boxtimer {
+  background: var(--bkgdark);
+}
+
+.boxmoment {
+  background: var(--bkgdark);
+}
+
+.boxovertimeon {
+  background: var(--bkgovertime);
+}
+
+
 /* Media Queries */
 @media (max-width: 600px) {
   .column {
     width: 100%;
   }
 }
+
+
+/* SPECIFIC STYLYINGS FROM FLEXYSCORE FOR SCOREBOARD */
+/* Sets Grid for Scoreboard */
+.containerbasket {
+  grid-template: auto / repeat(6, 1fr); 
+  font-size:3vw; 
+  font-family: 'Bebas Neue', cursive;
+}
+
+.containerbasket .boxmoment {
+  grid-row: 1/2; 
+  grid-column: 2/4;
+}
+
+.containerbasket .boxtimer {
+  grid-row: 1/2; 
+  grid-column: 4/6;
+}
+
+.containerbasket .boxhometeam {
+  grid-row: 2/3; 
+  grid-column: 1/3;
+}
+
+.containerbasket .boxhomepoints {
+  grid-row: 2/3; 
+  grid-column: 3/4;
+}
+
+.containerbasket .boxawayteam {
+  grid-row: 2/3; 
+  grid-column: 4/6;
+}
+
+.containerbasket .boxawaypoints {
+  grid-row: 2/3; 
+  grid-column: 6/7;
+}
+
+.containerbasket .boxhomefouls {
+  grid-row: 3/4; 
+  grid-column: 2/3;
+}
+
+.containerbasket .boxhometimeouts {
+  grid-row: 3/4; 
+  grid-column: 1/2;
+}
+
+.containerbasket .boxhomebonus {
+  grid-row: 3/4; 
+  grid-column: 3/4;
+}
+
+.containerbasket .boxawayfouls {
+  grid-row: 3/4; 
+  grid-column: 5/6;
+}
+
+.containerbasket .boxawaytimeouts {
+  grid-row: 3/4; 
+  grid-column: 4/5;
+}
+
+.containerbasket .boxawaybonus {
+  grid-row: 3/4; 
+  grid-column: 6/7;
+}
+
+.containerbasket .boxhomepoints, .containerbasket .boxawaypoints {
+  transform: none;
+}
+
+.containerbasket .space {
+  display:none;
+}
+
+.containerbasket .box, .containerbasket {
+  border-radius: 0 !important;
+}
+
+.containerbasket:after {
+  content: ""; 
+  background:url(https://www.flaticon.com/svg/static/icons/svg/33/33838.svg) no-repeat center; 
+  grid-row:1/2; 
+  grid-column: 6/7; 
+  background-size: 200%; 
+  filter: invert(.5);
+}
+
+.containerbasket .containerbasket {
+  box-sizing: border-box; 
+  border: solid 1vw #666;
+}
+
+.containerbasket .boxbonuson {
+  color: var(--textinverted);
+  background: var(--bkgovertime);
+}
+
+.containerbasket .secondliners {
+  font-size: .7em;
+  background: var(--bkg);
+  color: #000;
+  font-weight: bold;
+  border-top: solid 1px #ccc;
+  border-right: solid 1px #ddd;
+}
+
+/* this change labels of Fouls and Timeouts */
+.containerbasket .boxfouls:before {
+  content:"Fouls: "; 
+  font-size: .5em;
+}
+
+.containerbasket .boxtimeouts:before {
+  content:"Timeouts: "; 
+  font-size: .5em;
+}
+
+.containerbasket .boxbonus {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  font-size:.4em;
+}
+
+.containerbasket .boxhometeam, .containerbasket .boxawayteam {
+  position: relative; 
+  justify-content: flex-end; 
+  padding: 0 2vw;
+}
+
+.containerbasket .boxhomepoints, .containerbasket .boxawaypoints {
+  justify-content: center; 
+  padding: 0 2vw; 
+  text-align:center;
+}
+
+
+
+/* /*  INDIANA Styles - WILL CHANGE IN FUTURE WITH ALL TEAM STYLES  */
+.containerbasket .boxhometeam {
+  background: linear-gradient(72deg, rgba(0,40,93,1) 0%, rgba(184,180,147,1) 38%, rgba(212,206,181,1) 41%, rgba(253,187,50,1) 100%); 
+}
+
+.containerbasket .boxhometeam:before {
+  content:""; 
+  position:absolute; 
+  top:0; 
+  left:0; 
+  width:50%; 
+  height:100%; 
+  background:url(https://cdn.shopify.com/s/files/1/0490/0791/9253/files/Pacers-Full-Color.png) no-repeat center;
+  background-size:60%;
+}
+
+.containerbasket .boxhomepoints {
+  background:#fdbb32;
+}
+
+
+/*  TORONTO Styles - WILL CHANGE IN FUTURE WITH ALL TEAM STYLES  */
+.containerbasket .boxawayteam {
+  background:linear-gradient(72deg, rgba(0,0,0,1) 0%, rgba(222,123,123,1) 39%, rgba(227,166,166,1) 41%, rgba(255,0,0,1) 100%);
+}
+
+.containerbasket .boxawayteam:before {
+  content:""; 
+  position:absolute; 
+  top:0; 
+  left:0; 
+  width:50%; 
+  height:100%; 
+  background:url(https://www.nba.com/raptors/sites/raptors/files/raps-1718-mainlogo.png) no-repeat center; 
+  background-size:70%;
+}
+
+.containerbasket .boxawaypoints {
+  background:#ff0000;
+}
+
+  
