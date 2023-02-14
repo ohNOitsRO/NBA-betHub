@@ -286,6 +286,7 @@ $("#standings").click(function(event){
     mainBox.style.display = "flex";
     mainBox.innerHTML = "";
     mainBox.textContent = "COMING SOON!"
+    liveGames.textContent = "";
     
 
 });
@@ -296,6 +297,7 @@ $("#odds").click(function(event){
     mainBox.style.display = "flex";
     mainBox.innerHTML = "";
     mainBox.textContent = "COMING SOON!"
+    liveGames.textContent = "";
     
 
 });
