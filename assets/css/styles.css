@@ -166,6 +166,14 @@ nav {
   clear: both;
 }
 
+[id^="teamnames"]:hover {
+  color: #f96d00;
+  /* box-shadow: 0 0 5px #f96d00; */
+  text-shadow: 0 0 5px #f96d00;
+  cursor: pointer;
+  
+}
+
 #standings, #odds {
   text-align: center;
 }
